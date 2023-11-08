@@ -1,0 +1,27 @@
+<html>
+<body>   
+<h1>
+    Hello
+</h1>
+<div>
+<form action="{{  url_for('predict')}}"method="post">
+    
+    <input type="text" name="one"><br>
+    <input type="text" name="two"><br>
+    <input type="text" name="three"><br>
+    <input type="text" name="four"><br>
+    <input type="text" name="five"><br>
+    <input type="text" name="six"><br>
+    <input type="text" name="seven"><br>
+    <input type="text" name="eight"><br>
+    <input type="text" name="nine"><br>
+    <input type="text" name="ten"><br>
+    <button type="submit" class ="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+</div>
+
+{{prediction_text}}
+<br>
+<br>
+</body> 
+</html>
