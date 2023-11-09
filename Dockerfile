@@ -1,9 +1,6 @@
-FROM alpine:latest
-RUN apk update
-RUN apk add py-pip
-RUN apk add --no-cache python3-dev 
-RUN pip install --upgrade pip
-WORKDIR /app
+FROM python:3.11
 COPY . /app
-RUN pip install -r requirements.txt
-CMD ["python3", "app.py"]
+WORKDIR /app
+RUN pip install -r requiremnets.txt
+EXPOSE $PORT
+CMD python app.py --worker=4 --bind 0.0.0.0:$PORT app:app
